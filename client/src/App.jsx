@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 // } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
-import Nav from "./components/Nav";
+import NavBar from "./components/Nav";
 
 // const httpLink = createHttpLink({
 //   uri: '/graphql',
@@ -31,7 +31,7 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <>
-      <Nav />
+      <NavBar />
       <Outlet />
     </>
   );
