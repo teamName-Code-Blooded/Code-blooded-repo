@@ -8,7 +8,7 @@ const typeDefs = `
   type Item {
     _id: ID
     name:String
-    price:Int
+    price:Float
     description: String
     category:String
   }
@@ -21,7 +21,7 @@ const typeDefs = `
   type UserOrder{
     _id:ID
     userId:User
-    items[Item]
+    items:[Item]
     total:Int
   }
 
@@ -29,7 +29,7 @@ const typeDefs = `
 
   type Query {
 getUsers:[User]
-
+getItems:[Item]
   }
 
   
