@@ -1,5 +1,12 @@
 import Auth from '../../utils/auth';
 import { Link } from 'react-router-dom';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Dropdown } from 'react-bootstrap'
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+
 
 function Nav() {
   function showNavigation() {
@@ -30,21 +37,29 @@ function Nav() {
       );
     }
   }
-
   return (
-    <header className="flex-row px-1">
+    <header classNameName="flex-row px-1">
       <h1>
         <Link to="/">
           <span role="img" aria-label="shopping bag">
             🛍️
           </span>
-          -Shop-Shop
+          -Code Blooded Inc.
         </Link>
       </h1>
+      <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Categories
+      </Dropdown.Toggle>
 
+      <Dropdown.Menu>
+        <Dropdown.Item as={Link} to="/Sweatshirts">Sweatshirt</Dropdown.Item>
+        <Dropdown.Item as={Link}>T-shirt</Dropdown.Item>
+        <Dropdown.Item href="#">Hat</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
       <nav>{showNavigation()}</nav>
     </header>
   );
 }
-
 export default Nav;

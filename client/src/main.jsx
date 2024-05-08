@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
 
+
 import Home from "./pages/Home";
 
 import NoMatch from "./pages/NoMatch";
