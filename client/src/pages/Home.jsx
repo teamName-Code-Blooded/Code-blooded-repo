@@ -25,21 +25,24 @@ const Home = () => {
 
   return (
     //attach carousel here
+    <div>
+      <CarouselFadeExample />
 
-    <div className="container d-flex justify-content-around">
-      {products ? (
-        products.map((product) => (
-          <ProductCard
-            link={product.link}
-            image={product.image}
-            title={product.title}
-            text={product.text}
-            key={product.link}
-          />
-        ))
-      ) : (
-        <div>loading... </div>
-      )}
+      <div className="container d-flex justify-content-around">
+        {products ? (
+          products.map((product) => (
+            <ProductCard
+              link={product.link}
+              image={product.image}
+              title={product.title}
+              text={product.text}
+              key={product.link}
+            />
+          ))
+        ) : (
+          <div>loading... </div>
+        )}
+      </div>
     </div>
   );
 };
