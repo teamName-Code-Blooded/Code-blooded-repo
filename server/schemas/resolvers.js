@@ -25,11 +25,21 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addUserOrder: async (parent, { items }, context) => {
+      // Confirm user is logged in/authorized
+      // Create a new userOrder
+      // Push items to a user for the orders field
+      if (context.user) {
+        const userOrder = await new UserOrder(items);
 
-    // addOrder: async (parent, args) => {
-    //   await UserOrder.create(args.items);
-    //   return UserOrder;
-    // },
+        // Add order to specific user - user_id
+        // push order to user
+        await User.findById(context.user._id, {
+          $addToSet: { orders: userOrder },
+        });
+        return userOrder;
+      }
+    },
   },
 };
 
