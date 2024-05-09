@@ -20,19 +20,23 @@ const typeDefs = `
   }
   type UserOrder{
     _id:ID
-    userId:User
     items:[Item]
     total:Int
   }
 
-
-
-  type Query {
-getUsers:[User]
-getItems:[Item]
+  type Auth{
+    token: ID!
+    user: User
   }
 
-  
+type Query {
+  getUsers:[User]
+  getItems:[Item]
+  }
+
+type Mutation {
+  addUser(name: String!, email: String!, password: String!): Auth
+}
   
 `;
 
