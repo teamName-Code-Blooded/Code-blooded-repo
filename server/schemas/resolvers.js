@@ -19,6 +19,13 @@ const resolvers = {
       return { token, user };
     },
 
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+      // Generate token
+      const token = signToken(user);
+      return { token, user };
+    },
+
     // addOrder: async (parent, args) => {
     //   await UserOrder.create(args.items);
     //   return UserOrder;
