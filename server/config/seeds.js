@@ -2,27 +2,6 @@ const db = require("./connection");
 const { User, Item } = require("../models");
 
 db.once("open", async () => {
-  const users = await User.insertMany([
-    { name: "Ben", email: "ben2332@gmail.com", password: "supersecret" },
-    {
-      name: "Phyllis",
-      email: "phyllis5632@gmail.com",
-      password: "supersecret",
-    },
-    {
-      name: "Victor",
-      email: "victor3256@getMaxListeners.com",
-      password: "supersecret",
-    },
-    {
-      name: "Anthony",
-      email: "tankjhkf541@gmail.com",
-      password: "supersecret",
-    },
-  ]);
-
-  console.log("Users seeded");
-
   const items = await Item.insertMany([
     {
       name: "RUST FERRIS T-SHIRT",
@@ -55,6 +34,27 @@ db.once("open", async () => {
   ]);
 
   console.log("Items seeded");
+
+  const users = await User.insertMany([
+    { name: "Ben", email: "ben2332@gmail.com", password: "supersecret" },
+    {
+      name: "Phyllis",
+      email: "phyllis5632@gmail.com",
+      password: "supersecret",
+    },
+    {
+      name: "Victor",
+      email: "victor3256@getMaxListeners.com",
+      password: "supersecret",
+    },
+    {
+      name: "Anthony",
+      email: "tankjhkf541@gmail.com",
+      password: "supersecret",
+    },
+  ]);
+
+  console.log("Users seeded");
 
   process.exit();
 });
