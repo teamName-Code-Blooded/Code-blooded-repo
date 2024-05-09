@@ -7,7 +7,7 @@ const userOrderSchema = new Schema({
       ref: "Item",
     },
   ],
-  total: { type: Number, required: true },
+  // total: { type: Number, required: true },
 });
 
 const UserOrder = model("UserOrder", userOrderSchema);
