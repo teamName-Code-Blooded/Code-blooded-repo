@@ -108,8 +108,8 @@ button[disabled] {
   opacity: .8;
 }
 
-img {
-  max-width: 50%;
+header.img {
+  max-width: 25%;
 }
 
 .card-img-top{

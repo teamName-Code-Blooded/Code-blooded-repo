@@ -1,3 +1,4 @@
+import ProductCard from "../components/Card";
 
 export default function Accessories() {
     return(
