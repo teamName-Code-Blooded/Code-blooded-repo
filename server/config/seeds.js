@@ -16,7 +16,7 @@ db.once("open", async () => {
       name: "RUST FERRIS T-SHIRT",
       description:
         "100% cotton Rib-Knit Crew Neck Double needle sleeves and hem",
-      category: "shirt",
+      image: "./images/WaterBottleProd.png",
       price: 20.0,
       category: categories[0]._id,
     },
@@ -24,7 +24,8 @@ db.once("open", async () => {
       name: "EMBER MASCOT STICKERS",
       description:
         "Meet the friendly neighborhood Tomster. We love him, and you should too... ",
-      category: "sticker",
+      // category: "sticker",
+      image: "./images/WhiteHoodieProd.png"
       price: 6.0,
       category: categories[3]._id,
     },
@@ -79,3 +80,22 @@ db.once("open", async () => {
 
   process.exit();
 });
+
+
+// const models = require('../models');
+// const db = require('../config/connection');
+
+// module.exports = async (modelName, collectionName) => {
+//   try {
+//     let modelExists = await models[modelName].db.db.listCollections({
+//       name: collectionName
+//     }).toArray()
+
+//     if (modelExists.length) {
+//       await db.dropCollection(collectionName);
+//     }
+//   } catch (err) {
+//     throw err;
+//   }
+// }
+// await cleanDB('Tech', 'teches');

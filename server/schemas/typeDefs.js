@@ -9,6 +9,7 @@ const typeDefs = `
     price:Float
     description: String
     category: Category
+    image: String
   }
     type UserOrder{
     _id:ID
