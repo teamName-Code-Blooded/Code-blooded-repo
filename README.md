@@ -5,6 +5,8 @@
 
 ## Description
 
+
+
 Project Name is an interactive MERN Stack Single-Page Application designed to showcase collaborative skills and coding abilities in the context of a scalable, user-focused platform. It fulfills the requirements of a real-world problem-solving application using MongoDB, Express.js, React, and Node.js.
 
 ## Technologies Used
