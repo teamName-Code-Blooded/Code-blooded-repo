@@ -69,8 +69,14 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand className="" href="#home">
-          <img src={images} alt="CBlogo" />
+        <Navbar.Brand className="" href="/">
+          <img
+            className="header.img"
+            as={Link}
+            to="/"
+            src={images}
+            alt="CBlogo"
+          />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -89,10 +95,10 @@ function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link className="" href="#signup">
+            <Nav.Link className="" as={Link} to="/signup" href="/signup">
               Signup
             </Nav.Link>
-            <Nav.Link className="" href="#link">
+            <Nav.Link className="" as={Link} to="/login" href="/login">
               Login
             </Nav.Link>
           </Nav>
