@@ -4,6 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 
+
 function FooterMain() {
 
 return(
@@ -12,7 +13,7 @@ return(
   className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
 >
   <p className="col-md-4 mb-0 text-body-secondary">
-    &copy; 2024 Company, Inc
+    &copy; 2024 CodeBlooded Inc.
   </p>
 
   <a
@@ -26,19 +27,18 @@ return(
 
   <ul className="nav col-md-4 justify-content-end">
     <li className="nav-item">
-      <a href="#" className="nav-link px-2 text-body-secondary">Home</a>
+      <a href="#" className="nav-link px-2 text-body-secondary">
+        <img src="../../../public/images/instagram.svg" alt="instagram" /></a>
     </li>
     <li className="nav-item">
-      <a href="#" className="nav-link px-2 text-body-secondary">Features</a>
+      <a href="#" className="nav-link px-2 text-body-secondary">
+        <img src="../../../public/images/twitter.svg" alt="Twitter" />
+      </a>
     </li>
     <li className="nav-item">
-      <a href="#" className="nav-link px-2 text-body-secondary">Pricing</a>
-    </li>
-    <li className="nav-item">
-      <a href="#" className="nav-link px-2 text-body-secondary">FAQs</a>
-    </li>
-    <li className="nav-item">
-      <a href="#" className="nav-link px-2 text-body-secondary">About</a>
+      <a href="#" className="nav-link px-2 text-body-secondary">
+        <img src="../../../public/images/github.svg" alt="Github" />
+      </a>
     </li>
   </ul>
 </footer>
