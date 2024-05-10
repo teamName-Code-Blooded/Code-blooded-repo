@@ -16,18 +16,31 @@ export const QUERY_ITEMS = gql`
   }
 `;
 
-// export const QUERY_PRODUCTS = gql`
-//   query getProducts($category: ID) {
-//     products(category: $category) {
+
+
+
+// export const QUERY_CHECKOUT = gql`
+//   query getCheckout($products: [ID]!) {
+//     checkout(products: $products) {
+//       session
+//     }
+//   }
+// `;
+
+// export const QUERY_ALL_ITEMS = gql`
+//   {
+//     products {
 //       _id
 //       name
 //       description
 //       price
 //       quantity
-//       image
 //       category {
-//         _id
+//         name
 //       }
 //     }
 //   }
 // `;
+
+
+

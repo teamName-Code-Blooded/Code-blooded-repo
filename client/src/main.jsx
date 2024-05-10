@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./index.css";
-import Accessories from "./pages/Accessories.jsx"
-import CoffeeMugs from "./pages/CoffeeMugs.jsx"
-import Tshirts from "./pages/Tshirts.jsx"
+import Accessories from "./pages/Accessories.jsx";
+import CoffeeMugs from "./pages/CoffeeMugs.jsx";
+import Tshirts from "./pages/Tshirts.jsx";
 import Home from "./pages/Home";
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
@@ -30,17 +30,21 @@ const router = createBrowserRouter([
         element: <Signup />,
       },
       {
+        path: "/products/:id",
+        element: <h1>detail</h1>,
+      },
+      {
         path: "/t-shirts",
         element: <Tshirts />,
       },
       {
         path: "/coffeemugs",
-        element: <CoffeeMugs />
+        element: <CoffeeMugs />,
       },
       {
         path: "/accessories",
         element: <Accessories />,
-      }
+      },
     ],
   },
 ]);

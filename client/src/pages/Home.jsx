@@ -106,6 +106,7 @@ const Home = () => {
                 name={product.name}
                 text={product.description}
                 key={product._id}
+                id={product._id}
               />
             ))
           ) : (
