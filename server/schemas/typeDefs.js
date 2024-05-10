@@ -28,6 +28,7 @@ const typeDefs = `
 
 type Query {
   getUsers:[User]
+  getUser:User
   getItems:[Item]
   }
 

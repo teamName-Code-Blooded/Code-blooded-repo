@@ -9,6 +9,12 @@ const resolvers = {
         populate: { path: "items" },
       });
     },
+    getUser: async (parent, args, context) => {
+      if (context.user) {
+        const user = await User.findById(context.user._id);
+        return user;
+      }
+    },
     getItems: async () => {
       return Item.find();
     },
