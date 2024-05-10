@@ -7,8 +7,7 @@ const Home = () => {
     {
       //link, image, title, text
       link: "/products/1",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png",
+      image: "./images/WhiteHoodieProd.png",
       title: "Basketball",
       text: "This is a good basketball",
     },
@@ -17,8 +16,44 @@ const Home = () => {
       link: "/products/2",
       image:
         // "../assets/images/ExampleCarouselImage.svg"
-        "https://m.media-amazon.com/images/I/51-ruKlRJRL._AC_UF1000,1000_QL80_.jpg",
+        "./images/WhiteTshirtProd.png",
       title: "Volleyball",
+      text: "This is a good volleyball",
+    },
+    {
+      //link, image, title, text
+      link: "/products/3",
+      image:
+        // "../assets/images/ExampleCarouselImage.svg"
+        "./images/MugProd.png",
+      title: "Mug",
+      text: "This is a good volleyball",
+    },
+    {
+      //link, image, title, text
+      link: "/products/4",
+      image:
+        // "../assets/images/ExampleCarouselImage.svg"
+        "./images/CoffeeProd.png",
+      title: "Mug",
+      text: "This is a good volleyball",
+    },
+    {
+      //link, image, title, text
+      link: "/products/4",
+      image:
+        // "../assets/images/ExampleCarouselImage.svg"
+        "./images/MugProd_2.png",
+      title: "Mug",
+      text: "This is a good volleyball",
+    },
+    {
+      //link, image, title, text
+      link: "/products/4",
+      image:
+        // "../assets/images/ExampleCarouselImage.svg"
+        "./images/WaterBottleProd.png",
+      title: "Mug",
       text: "This is a good volleyball",
     },
   ];
@@ -27,7 +62,24 @@ const Home = () => {
     //attach carousel here
     <div>
       <CarouselFadeExample />
-
+      <div className="container d-flex justify-content-around">
+        <img
+          src="./images/ProductsFont.png"
+          style={{
+            height: "100px",
+            margin: "30px",
+          }}
+        ></img>
+        {/* <img
+          src="./images/WhiteTshirtModel_2.png"
+          style={{
+            height: "500px",
+            width: "100%",
+            objectFit: "fill",
+            maxWidth: "100%",
+          }}
+        ></img> */}
+      </div>
       <div className="container d-flex justify-content-around">
         {products ? (
           products.map((product) => (

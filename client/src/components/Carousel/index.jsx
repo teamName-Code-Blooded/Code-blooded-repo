@@ -8,7 +8,12 @@ function CarouselFadeExample() {
         {/* <ToteBagModel text="First slide" /> */}
         <img
           src="./images/ToteBagModel_2.jpg"
-          style={{ height: "500px", width: "100%" }}
+          style={{
+            height: "500px",
+            width: "100%",
+            objectFit: "fill",
+            maxWidth: "100%",
+          }}
         ></img>
         <Carousel.Caption>
           <h3>First slide label</h3>
@@ -19,7 +24,12 @@ function CarouselFadeExample() {
         {/* <ToteBagModel text="Second slide" /> */}
         <img
           src="./images/WhiteTshirtModel_2.png"
-          style={{ height: "500px", width: "100%" }}
+          style={{
+            height: "500px",
+            width: "100%",
+            objectFit: "fill",
+            maxWidth: "100%",
+          }}
         ></img>
         <Carousel.Caption>
           <h3>Second slide label</h3>
@@ -30,7 +40,12 @@ function CarouselFadeExample() {
         {/* <ToteBagModel text="Third slide" /> */}
         <img
           src="./images/WhiteLongSleeveModel_2.png"
-          style={{ height: "500px", width: "100%" }}
+          style={{
+            height: "500px",
+            width: "100%",
+            objectFit: "fill",
+            maxWidth: "100%",
+          }}
         ></img>
         <Carousel.Caption>
           <h3>Third slide label</h3>
