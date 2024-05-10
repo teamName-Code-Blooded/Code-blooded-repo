@@ -4,7 +4,10 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     getUsers: async () => {
-      return User.find();
+      return User.find().populate({
+        path: "userOrders",
+        populate: { path: "items" },
+      });
     },
     getItems: async () => {
       return Item.find();
@@ -30,12 +33,12 @@ const resolvers = {
       // Create a new userOrder
       // Push items to a user for the orders field
       if (context.user) {
-        const userOrder = await new UserOrder(items);
+        const userOrder = new UserOrder({ items });
 
         // Add order to specific user - user_id
         // push order to user
-        await User.findById(context.user._id, {
-          $addToSet: { orders: userOrder },
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { userOrders: userOrder },
         });
         return userOrder;
       }
