@@ -1,9 +1,7 @@
 const typeDefs = `
-  type User {
+ type Category {
     _id: ID
     name: String
-    email:String
-    password:String
   }
   type Item {
     _id: ID
@@ -12,37 +10,34 @@ const typeDefs = `
     description: String
     category: Category
   }
-  type Cart {
-    _id: ID
-    userId:User
-    items:[Item]
-    total:Int
-  }
-  type UserOrder{
+    type UserOrder{
     _id:ID
     items:[Item]
-    total:Int
   }
-
-  type Category {
+   type User {
     _id: ID
     name: String
+    email:String
+    password:String
+    userOrders:[UserOrder]
   }
-
-  type Auth{
+    type Auth{
     token: ID!
     user: User
   }
 
 type Query {
   getUsers:[User]
+  getUser:User
   getItems:[Item]
+  getItem(_id:ID!):Item
+  getCategories:[Category]
   }
 
 type Mutation {
   addUser(name: String!, email: String!, password: String!): Auth
   login(email: String!, password: String!): Auth
-  addUserOrder(items: [ID]!): Item
+  addUserOrder(items: [ID]!): UserOrder
 }
   
 `;
