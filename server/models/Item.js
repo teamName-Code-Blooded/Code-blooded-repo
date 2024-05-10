@@ -5,6 +5,7 @@ const itemSchema = new Schema({
   price: { type: Number, required: true },
   description: { type: String, required: true },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
+  image: { type: String },
 });
 
 const Item = model("Item", itemSchema);

@@ -1,4 +1,4 @@
-const { User, Item, UserOrder } = require("../models");
+const { User, Item, UserOrder, Category } = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -17,6 +17,12 @@ const resolvers = {
     },
     getItems: async () => {
       return Item.find();
+    },
+    getItem: async (parent, { _id }) => {
+      return await Item.findById(_id);
+    },
+    getCategories: async () => {
+      return Category.find();
     },
   },
 

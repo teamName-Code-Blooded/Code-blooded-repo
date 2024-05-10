@@ -30,6 +30,8 @@ type Query {
   getUsers:[User]
   getUser:User
   getItems:[Item]
+  getItem(_id:ID!):Item
+  getCategories:[Category]
   }
 
 type Mutation {
