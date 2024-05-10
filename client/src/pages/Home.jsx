@@ -1,5 +1,6 @@
 import ProductCard from "../components/Card";
 import CarouselFadeExample from "../components/Carousel";
+import FooterMain from "../components/Footer";
 // import ExampleCarouselImage from "../assets/images"
 
 const Home = () => {
@@ -95,6 +96,7 @@ const Home = () => {
           <div>loading... </div>
         )}
       </div>
+      <FooterMain />
     </div>
   );
 };
