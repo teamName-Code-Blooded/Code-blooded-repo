@@ -1,6 +1,7 @@
 import ProductCard from "../components/Card";
 import CarouselFadeExample from "../components/Carousel";
 import FooterMain from "../components/Footer";
+import { Row, Container } from "react-bootstrap";
 // import ExampleCarouselImage from "../assets/images"
 
 const Home = () => {
@@ -81,7 +82,7 @@ const Home = () => {
           }}
         ></img> */}
       </div>
-      <div className="container d-flex justify-content-around">
+      <Container>
         {products ? (
           products.map((product) => (
             <ProductCard
@@ -95,7 +96,8 @@ const Home = () => {
         ) : (
           <div>loading... </div>
         )}
-      </div>
+      </Container>
+
       <FooterMain />
     </div>
   );
