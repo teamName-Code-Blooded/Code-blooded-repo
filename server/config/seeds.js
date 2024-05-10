@@ -3,46 +3,63 @@ const { User, Item, Category } = require("../models");
 
 db.once("open", async () => {
   const categories = await Category.insertMany([
-    { name: "Shirts" },
-    { name: "Mugs" },
-    { name: "Computers" },
-    { name: "Stickers" },
+    { name: "T-Shirt" },
+    { name: "White Hoodie" },
+    { name: "Tote Bag" },
+    { name: "Water Bottle" },
+    { name: "Coffee Mug" },
+    { name: "Coffee" },
   ]);
 
   console.log("categories seeded");
 
   const items = await Item.insertMany([
     {
-      name: "RUST FERRIS T-SHIRT",
+      name: "CodeBlooded T-Shirt",
       description:
-        "100% cotton Rib-Knit Crew Neck Double needle sleeves and hem",
-      image: "./images/WaterBottleProd.png",
-      price: 20.0,
+        "You will proudly wear this 100% cotton T-shirt with rib-knit crew neck with double-needle sleeves and hem, sporting the CodeBlooded logo!",
+      category: "shirt",
+      price: 18.99,
       category: categories[0]._id,
     },
     {
-      name: "EMBER MASCOT STICKERS",
+      name: "CodeBlooded White Hoodie",
       description:
-        "Meet the friendly neighborhood Tomster. We love him, and you should too... ",
-      // category: "sticker",
-      image: "./images/WhiteHoodieProd.png"
-      price: 6.0,
+        "You'll be a hit with this super soft 100% cotton hoodie with the sought after CodeBlooded logo!",
+      category: "hoodie",
+      price: 36.99,
       category: categories[3]._id,
     },
     {
-      name: "MSI Codex R2 C13NUC5-218US Gaming PC",
+      name: "CodeBlooded Tote Bag",
       description:
-        "Intel Core i5 13400F (1.8GHz) Processor 16GB DDR5-5600 RAM NVIDIA GeForce RTX 4060 Graphics Card1TB M.2 NVMe Gen4 SSD 2.5GbE LAN, WiFi 7 (802.11be), Bluetooth 5.4",
-      category: "computer",
-      price: 1999.99,
+        "Versatile heavy duty large cotton canvas tote bag with the famous CodeBlooded logo!",
+      category: "toteBag",
+      price: 24.99,
       category: categories[2]._id,
     },
     {
-      name: "RUST FERRIS MUG",
+      name: "CodeBlooded Water Bottle",
       description:
-        "Impress your coffee dates with this sleek, glossy, Rust Ferris mug! It's the perfect way to show off your caffeinated sophistication.",
-      category: "mug",
-      price: 12.0,
+        "Your stainless steel lined novelty water bottle, complete with the very cool CodeBlooded logo will be the talk of the gym!",
+      category: "waterBottle",
+      price: 15.99,
+      category: categories[1]._id,
+    },
+    {
+      name: "CodeBlooded Coffee Mug",
+      description:
+        "Impress your coworkers with this sleek, glossy, CodeBlooded coffee mug! It's the perfect way to show off your caffeinated sophistication and computer savy!",
+      category: "coffeeMug",
+      price: 12.99,
+      category: categories[1]._id,
+    },
+    {
+      name: "CodeBlooded Coffee",
+      description:
+        "You'll love this dark roast coffee; the perfect match with CodeBlooded's exclusive coffee mug!",
+      category: "coffee",
+      price: 12.99,
       category: categories[1]._id,
     },
   ]);
@@ -80,7 +97,6 @@ db.once("open", async () => {
 
   process.exit();
 });
-
 
 // const models = require('../models');
 // const db = require('../config/connection');
