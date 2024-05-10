@@ -4,6 +4,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Nav, Navbar, NavDropdown, Row, Col } from "react-bootstrap";
 import images from "../../../public/images/CodeBloodedLogo_2.png";
+import AuthService from "../../utils/auth";
 
 // import Container from 'react-bootstrap/Container';
 // import Nav from 'react-bootstrap/Nav';
@@ -98,9 +99,16 @@ function NavBar() {
             <Nav.Link className="" as={Link} to="/signup" href="/signup">
               Signup
             </Nav.Link>
-            <Nav.Link className="" as={Link} to="/login" href="/login">
-              Login
-            </Nav.Link>
+
+            {AuthService.loggedIn() === true ? (
+              <Nav.Link className="" onClick={() => Auth.logout()} as={Link}>
+                Logout
+              </Nav.Link>
+            ) : (
+              <Nav.Link className="" as={Link} to="/login" href="/login">
+                Login
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
