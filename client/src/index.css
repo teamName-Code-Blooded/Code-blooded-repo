@@ -99,6 +99,15 @@ button {
   background-color: var(--secondary);
 }
 
+.prod {
+  font-family: "Trebuchet MS";
+  text-decoration: none;
+  color: #232f3e;
+}
+.prodTitle {
+  font-weight: bolder;
+}
+
 button:hover {
   opacity: 0.8;
 }

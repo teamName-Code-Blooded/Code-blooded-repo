@@ -85,11 +85,11 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <NavDropdown title="Categories" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/t-shirts" href="#action/3.2">
+                Clothing
+              </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/coffeemugs" href="#action/3.1">
                 Coffee Mugs
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/t-shirts" href="#action/3.2">
-                T-shirts
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/accessories" href="#action/3.3">
                 Accessories

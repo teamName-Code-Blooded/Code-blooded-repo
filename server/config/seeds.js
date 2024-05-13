@@ -3,64 +3,76 @@ const { User, Item, Category } = require("../models");
 
 db.once("open", async () => {
   const categories = await Category.insertMany([
-    { name: "T-Shirt" },
-    { name: "White Hoodie" },
-    { name: "Tote Bag" },
-    { name: "Water Bottle" },
-    { name: "Coffee Mug" },
-    { name: "Coffee" },
+    { name: "Coffee Mugs" },
+    { name: "Clothing" },
+    { name: "Accessories" },
   ]);
 
   console.log("categories seeded");
 
   const items = await Item.insertMany([
     {
-      name: "CodeBlooded T-Shirt",
+      name: "Code Blooded T-SHIRT",
       description:
-        "You will proudly wear this 100% cotton T-shirt with rib-knit crew neck with double-needle sleeves and hem, sporting the CodeBlooded logo!",
-      category: "shirt",
-      price: 18.99,
+        "100% cotton Rib-Knit Crew Neck Double needle sleeves and hem",
+      image: "./images/WhiteTshirtProd.png",
+      price: 25.0,
+      category: "Clothing",
+      category: categories[1]._id,
+    },
+    // {
+    //   name: "EMBER MASCOT STICKERS",
+    //   description:
+    //     "Meet the friendly neighborhood Tomster. We love him, and you should too... ",
+    //   // category: "sticker",
+    //   image: "./images/WhiteHoodieProd.png",
+    //   price: 6.0,
+    //   category: categories[3]._id,
+    // },
+    {
+      name: "Code Blooded Hoodie",
+      description:
+        "Introducing our premium Cotton Comfort Hoodie, the ultimate blend of style, comfort, and versatility. Crafted with the finest quality cotton, this hoodie is designed to be your go-to piece for all seasons",
+      image: "./images/WhiteHoodieProd.png",
+      category: "Clothing",
+      price: 50.0,
+      category: categories[1]._id,
+    },
+    {
+      name: "Code Blooded Coffee MUG",
+      description:
+        "Impress your coffee dates with this sleek, glossy, Rust Ferris mug! It's the perfect way to show off your caffeinated sophistication.",
+      image: "./images/MugProd.png",
+      category: "Coffee Mug",
+      price: 20.0,
       category: categories[0]._id,
     },
     {
-      name: "CodeBlooded White Hoodie",
+      name: "Code Blooded Coffee MUG",
       description:
-        "You'll be a hit with this super soft 100% cotton hoodie with the sought after CodeBlooded logo!",
-      category: "hoodie",
-      price: 36.99,
-      category: categories[3]._id,
+        "Impress your coffee dates with this sleek, glossy, Rust Ferris mug! It's the perfect way to show off your caffeinated sophistication.",
+      image: "./images/MugProd_2.png",
+      category: "Coffee Mug",
+      price: 20.0,
+      category: categories[0]._id,
     },
     {
-      name: "CodeBlooded Tote Bag",
+      name: "Code Blooded Water Bottle",
       description:
-        "Versatile heavy duty large cotton canvas tote bag with the famous CodeBlooded logo!",
-      category: "toteBag",
-      price: 24.99,
+        "Durable and stylish Stainless Steel Water Bottle, the perfect companion for your hydration needs wherever life takes you",
+      image: "./images/WaterBottleProd.png",
+      category: "Accessories",
+      price: 20.0,
       category: categories[2]._id,
     },
     {
-      name: "CodeBlooded Water Bottle",
+      name: "Code Blooded Ground Coffee",
       description:
-        "Your stainless steel lined novelty water bottle, complete with the very cool CodeBlooded logo will be the talk of the gym!",
-      category: "waterBottle",
-      price: 15.99,
-      category: categories[1]._id,
-    },
-    {
-      name: "CodeBlooded Coffee Mug",
-      description:
-        "Impress your coworkers with this sleek, glossy, CodeBlooded coffee mug! It's the perfect way to show off your caffeinated sophistication and computer savy!",
-      category: "coffeeMug",
-      price: 12.99,
-      category: categories[1]._id,
-    },
-    {
-      name: "CodeBlooded Coffee",
-      description:
-        "You'll love this dark roast coffee; the perfect match with CodeBlooded's exclusive coffee mug!",
-      category: "coffee",
-      price: 12.99,
-      category: categories[1]._id,
+        "Indulge in the rich aroma and bold flavor of our meticulously crafted Ground Coffee, a true testament to the artistry of coffee roasting.",
+      image: "./images/CoffeeProd.png",
+      category: "Coffee Mug",
+      price: 20.0,
+      category: categories[0]._id,
     },
   ]);
 
