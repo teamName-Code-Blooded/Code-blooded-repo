@@ -5,7 +5,7 @@ import { Row, Container } from "react-bootstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_ITEMS } from "../utils/queries";
 
-const CoffeeMugs = () => {
+const Clothing = () => {
   const [items, setItems] = useState([]);
 
   const { loading, data } = useQuery(QUERY_ITEMS);
@@ -17,11 +17,12 @@ const CoffeeMugs = () => {
   if (loading) {
     return <h2>Loading...</h2>;
   }
+
   return (
     <div>
       <div className="container d-flex justify-content-around">
         <img
-          src="./images/CoffeeMugFont.png"
+          src="./images/ClothingFont.png"
           style={{
             height: "100px",
             margin: "30px",
@@ -42,15 +43,13 @@ const CoffeeMugs = () => {
           {products ? (
             products
               .filter(
-                (product) => product.category._id === "66418737b612788c43324a6f"
+                (product) => product.category._id === "66418737b612788c43324a70"
               )
               .map((product) => (
                 <ProductCard
-                  // link={product.price}
                   image={product.image}
                   name={product.name}
                   text={product.description}
-                  // category={product.category}
                   price={product.price}
                   key={product._id}
                   id={product._id}
@@ -67,4 +66,4 @@ const CoffeeMugs = () => {
   );
 };
 
-export default CoffeeMugs;
+export default Clothing;

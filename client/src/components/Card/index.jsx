@@ -9,12 +9,15 @@ function ProductCard(props) {
     // wrap card in link to make clickable
     // <Link to={props.link} className=" col-sm-6 mb-3">
 
-    <Card className="m-4" style={{ width: "18rem" }} key={props.key}>
-      <Link to={`/products/${props.id}`}>
+    <Card className="m-4" style={{ width: "15rem" }} key={props.key}>
+      <Link className="prod" to={`/products/${props.id}`}>
         <Card.Img variant="top" src={props.image} />
         <Card.Body>
-          <Card.Title>{props.name}</Card.Title>
-          <Card.Text>{props.text}</Card.Text>
+          <Card.Title style={{ fontWeight: "bolder" }}>{props.name}</Card.Title>
+          <Card.Text style={{ fontWeight: "bolder" }}>${props.price}</Card.Text>
+          {/* <Card.Text style={{ fontSize: "12px", fontWeight: "lighter" }}>
+            {props.text}
+          </Card.Text> */}
           {/* <Button variant="primary"></Button> */}
         </Card.Body>
       </Link>
@@ -27,3 +30,5 @@ export default ProductCard;
 
 //make a component and place in main.jsx element tag
 //use css class to make a tag not show up bold blue font
+
+//This is a test
