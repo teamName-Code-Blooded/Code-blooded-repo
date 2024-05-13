@@ -19,6 +19,45 @@ export const QUERY_ITEMS = gql`
 
 
 
+// ------------------------ get All coffee mug items --------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------ get all clothing items --------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------ get all accessories --------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 // export const QUERY_CHECKOUT = gql`
 //   query getCheckout($products: [ID]!) {
 //     checkout(products: $products) {

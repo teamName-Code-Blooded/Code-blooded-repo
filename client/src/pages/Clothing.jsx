@@ -5,7 +5,7 @@ import { Row, Container } from "react-bootstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_ITEMS } from "../utils/queries";
 
-const CoffeeMugs = () => {
+const Clothing = () => {
   const [items, setItems] = useState([]);
 
   const { loading, data } = useQuery(QUERY_ITEMS);
@@ -21,7 +21,7 @@ const CoffeeMugs = () => {
     <div>
       <div className="container d-flex justify-content-around">
         <img
-          src="./images/CoffeeMugFont.png"
+          src="./images/ClothingFont.png"
           style={{
             height: "100px",
             margin: "30px",
@@ -63,4 +63,4 @@ const CoffeeMugs = () => {
   );
 };
 
-export default CoffeeMugs;
+export default Clothing;
