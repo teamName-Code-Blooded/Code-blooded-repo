@@ -17,6 +17,7 @@ const Clothing = () => {
   if (loading) {
     return <h2>Loading...</h2>;
   }
+
   return (
     <div>
       <div className="container d-flex justify-content-around">
@@ -40,18 +41,20 @@ const Clothing = () => {
       <div className="d-flex justify-content-center">
         <Container className="d-flex justify-content-center row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
           {products ? (
-            products.map((product) => (
-              <ProductCard
-                // link={product.price}
-                image={product.image}
-                name={product.name}
-                text={product.description}
-                // category={product.category}
-                price={product.price}
-                key={product._id}
-                id={product._id}
-              />
-            ))
+            products
+              .filter(
+                (product) => product.category._id === "66418737b612788c43324a70"
+              )
+              .map((product) => (
+                <ProductCard
+                  image={product.image}
+                  name={product.name}
+                  text={product.description}
+                  price={product.price}
+                  key={product._id}
+                  id={product._id}
+                />
+              ))
           ) : (
             <div>loading... </div>
           )}

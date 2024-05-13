@@ -16,47 +16,25 @@ export const QUERY_ITEMS = gql`
   }
 `;
 
-
-
-
 // ------------------------ get All coffee mug items --------------------------------------
+//get items by category id
 
-
-
-
-
-
-
-
-
-
-
+// `query getItemsbyCat {
+//   getItems {
+//     category {
+//       _id
+//     }
+//     name
+//     price
+//     image
+//     description
+//   }
+// }
+// `;
 
 // ------------------------ get all clothing items --------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
 // ------------------------ get all accessories --------------------------------------
-
-
-
-
-
-
-
-
-
-
-
 
 // export const QUERY_CHECKOUT = gql`
 //   query getCheckout($products: [ID]!) {
@@ -80,6 +58,3 @@ export const QUERY_ITEMS = gql`
 //     }
 //   }
 // `;
-
-
-

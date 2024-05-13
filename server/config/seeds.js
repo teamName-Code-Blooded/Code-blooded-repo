@@ -73,7 +73,10 @@ db.once("open", async () => {
       category: "Coffee Mug",
       price: 20.0,
       category: categories[0]._id,
-    },
+    }
+
+
+
   ]);
 
   console.log("Items seeded");
