@@ -105,6 +105,8 @@ const Home = () => {
                 image={product.image}
                 name={product.name}
                 text={product.description}
+                // category={product.category}
+                price={product.price}
                 key={product._id}
                 id={product._id}
               />

@@ -3,47 +3,76 @@ const { User, Item, Category } = require("../models");
 
 db.once("open", async () => {
   const categories = await Category.insertMany([
-    { name: "Shirts" },
-    { name: "Mugs" },
-    { name: "Computers" },
-    { name: "Stickers" },
+    { name: "Coffee Mugs" },
+    { name: "Clothing" },
+    { name: "Accessories" },
   ]);
 
   console.log("categories seeded");
 
   const items = await Item.insertMany([
     {
-      name: "RUST FERRIS T-SHIRT",
+      name: "Code Blooded T-SHIRT",
       description:
         "100% cotton Rib-Knit Crew Neck Double needle sleeves and hem",
-      image: "./images/WaterBottleProd.png",
+      image: "./images/WhiteTshirtProd.png",
+      price: 25.0,
+      category: "Clothing",
+      category: categories[1]._id,
+    },
+    // {
+    //   name: "EMBER MASCOT STICKERS",
+    //   description:
+    //     "Meet the friendly neighborhood Tomster. We love him, and you should too... ",
+    //   // category: "sticker",
+    //   image: "./images/WhiteHoodieProd.png",
+    //   price: 6.0,
+    //   category: categories[3]._id,
+    // },
+    {
+      name: "Code Blooded Hoodie",
+      description:
+        "Introducing our premium Cotton Comfort Hoodie, the ultimate blend of style, comfort, and versatility. Crafted with the finest quality cotton, this hoodie is designed to be your go-to piece for all seasons",
+      image: "./images/WhiteHoodieProd.png",
+      category: "Clothing",
+      price: 50.0,
+      category: categories[1]._id,
+    },
+    {
+      name: "Code Blooded Coffee MUG",
+      description:
+        "Impress your coffee dates with this sleek, glossy, Rust Ferris mug! It's the perfect way to show off your caffeinated sophistication.",
+      image: "./images/MugProd.png",
+      category: "Coffee Mug",
       price: 20.0,
       category: categories[0]._id,
     },
     {
-      name: "EMBER MASCOT STICKERS",
+      name: "Code Blooded Coffee MUG",
       description:
-        "Meet the friendly neighborhood Tomster. We love him, and you should too... ",
-      // category: "sticker",
-      image: "./images/WhiteHoodieProd.png"
-      price: 6.0,
-      category: categories[3]._id,
+        "Impress your coffee dates with this sleek, glossy, Rust Ferris mug! It's the perfect way to show off your caffeinated sophistication.",
+      image: "./images/MugProd_2.png",
+      category: "Coffee Mug",
+      price: 20.0,
+      category: categories[0]._id,
     },
     {
-      name: "MSI Codex R2 C13NUC5-218US Gaming PC",
+      name: "Code Blooded Water Bottle",
       description:
-        "Intel Core i5 13400F (1.8GHz) Processor 16GB DDR5-5600 RAM NVIDIA GeForce RTX 4060 Graphics Card1TB M.2 NVMe Gen4 SSD 2.5GbE LAN, WiFi 7 (802.11be), Bluetooth 5.4",
-      category: "computer",
-      price: 1999.99,
+        "Durable and stylish Stainless Steel Water Bottle, the perfect companion for your hydration needs wherever life takes you",
+      image: "./images/WaterBottleProd.png",
+      category: "Accessories",
+      price: 20.0,
       category: categories[2]._id,
     },
     {
-      name: "RUST FERRIS MUG",
+      name: "Code Blooded Ground Coffee",
       description:
-        "Impress your coffee dates with this sleek, glossy, Rust Ferris mug! It's the perfect way to show off your caffeinated sophistication.",
-      category: "mug",
-      price: 12.0,
-      category: categories[1]._id,
+        "Indulge in the rich aroma and bold flavor of our meticulously crafted Ground Coffee, a true testament to the artistry of coffee roasting.",
+      image: "./images/CoffeeProd.png",
+      category: "Coffee Mug",
+      price: 20.0,
+      category: categories[0]._id,
     },
   ]);
 
@@ -80,7 +109,6 @@ db.once("open", async () => {
 
   process.exit();
 });
-
 
 // const models = require('../models');
 // const db = require('../config/connection');
