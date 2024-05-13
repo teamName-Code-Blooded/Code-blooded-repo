@@ -1,13 +1,9 @@
-# Project Name
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/yourusername/projectname/blob/master/LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yourusername/projectname/pulls)
+# Project 3 - MERN Stack Single-Page Application
 
 ## Description
 
-
-
-Project Name is an interactive MERN Stack Single-Page Application designed to showcase collaborative skills and coding abilities in the context of a scalable, user-focused platform. It fulfills the requirements of a real-world problem-solving application using MongoDB, Express.js, React, and Node.js.
+This project represents an interactive MERN Stack Single-Page Application designed to showcase collaborative skills and coding abilities in the context of a scalable, user-focused platform. It fulfills the requirements of a real-world problem-solving application using VS Code editor where Apollo client, React-Bootstrap, graphql, React, and Vitest were used to synthesize the framework, database, and libraries used. Once complete, the project was uploaded to a Github repository.
+Our team chose to create an eCommerce website that allows users to select from various items to purchase, place them in a cart, and the proceed to finalize their order. In order to navigate to the cart the user must be securely logged in. The completed application will illustrate to employers the team’s collaborative skills and coding abilities in the context of a scalable, user-focused MERN. 
 
 ## Technologies Used
 
@@ -19,57 +15,84 @@ Project Name is an interactive MERN Stack Single-Page Application designed to sh
 - Mongoose ODM
 - JSON Web Token (JWT)
 - Render (for deployment)
-- Stripe Payment Platform (optional)
 - CSS (styled-components, Emotion, or other)
-- Progressive Web Application (PWA) features (optional)
+- React Bootstrap
 
-## Features
+## Project Requirements
 
-- User authentication with JWT
-- GraphQL API for efficient data handling
-- MongoDB database integration with Mongoose
-- Responsive and polished UI
-- Interactive features accepting and responding to user input
-- Protection of sensitive API key information on the server
-- Clean repository adhering to quality coding standards
+Our group will adhere to the requirements set forth to us by our instructor. These requirements include use of everything we have learned throughout this course to create a MERN stack single-page application. It must work with real-world data to solve a real-world challenge. It’s focus is on data and user demand. This project will provide the team with the best opportunity to demonstrate our problem-solving skills, which employers will want to see during interviews. Our project must also fulfill the following requirements:
+
+* Use of React for the front end.
+
+* Use of GraphQL with a Node.js and Express.js server.
+
+* Use of MongoDB and the Mongoose ODM for the database.
+
+* Use of queries and mutations for retrieving, adding, updating, and deleting data.
+
+* Be deployed using Render.
+
+* Have a polished UI.
+
+* Be responsive.
+
+* Be interactive.
+
+* Must include authentication.
+
+* Must protect sensitive API key information on the server.
+
+* Must include a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
+
+* Must include a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Presentation
 
-### Elevator Pitch
+A Powerpoint presentation to the instructors and class will be given on the project due date.
 
-[Provide a concise one-minute description of your application here.]
+### Elevator Pitch
+Great to meet you! Our team is cleverly called “Code-Blooded.”  We are recent graduates of the Denver University Coding Bootcamp where we have expertise in designing and creating complex websites through the use of various coding tools. We are versatile in our abilities and would be able to create a wide range of projects that will surely meet your needs. Please contact us with your questions and an opportunity for us to demonstrate our abilities.
 
 ### Concept
-
-[Explain your user story and motivation for development here.]
-
+A full stack project designed to satisfy the requirement of incorporating Apollo client, Bootstrap, Graphql, React, and Vitest into its creation. The project chosen is an eCommerce website which provides the user with options to select various items from a shopping page and place them into a cart. Once items are placed into the cart and the user would like to proceed with the purchase, he/she is first securely logged in, and then directed to the payment window.
 ### Process
+************************************************
 
-- Technologies used
-- Task breakdown and assignment of roles
-- Challenges encountered and successes achieved
+### Contributors
 
-### Demo
+https://github.com/amartin02
 
-[Include a demonstration of your application.]
+https://github.com/vicduar
+
+http://github.com/chrisjames1724
+
+http://github.com/giordior
+
+https://github.com/lavendarqueen 
 
 ### Directions for Future Development
 
-[Discuss potential future development directions.]
+1. Incorporate STRIPE into the project as the payment processing platform.
+2. Expand number of store items.
 
 ## Deployment
 
-- [Link to deployed application](#)
-- [Link to GitHub repository](#)
+- [Link to deployed application](#)**********************************
+
+- Link to Github Repo:
+
+https://github.com/teamName-Code-Blooded/Code-blooded-repo.git
+
 
 ## Project Presentation
 
-[Use the provided project presentation template [here](https://link_to_presentation_template) to address presentation requirements.]
+Presented to the class on the due date. The following are screenshots of the webpages:
 
 ## Credits
 
-[Include any credits or acknowledgments here.]
+Machock, B. (2024, May 7-12). Zoom meeting at www.zoom.us. Denver University Bootcamp.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project uses the MIT license.
+
