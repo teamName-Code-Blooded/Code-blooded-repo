@@ -1,4 +1,4 @@
-# Project 3 - MERN Stack Single-Page Application
+ 3 - MERN Stack Single-Page Application
 
 ## Description
 
@@ -13,6 +13,7 @@ Our team chose to create an eCommerce website that allows users to select from v
 - Express.js
 - MongoDB
 - Mongoose ODM
+- Javascript
 - JSON Web Token (JWT)
 - Render (for deployment)
 - CSS (styled-components, Emotion, or other)
@@ -51,12 +52,46 @@ Our group will adhere to the requirements set forth to us by our instructor. The
 A Powerpoint presentation to the instructors and class will be given on the project due date.
 
 ### Elevator Pitch
+
 Great to meet you! Our team is cleverly called “Code-Blooded.”  We are recent graduates of the Denver University Coding Bootcamp where we have expertise in designing and creating complex websites through the use of various coding tools. We are versatile in our abilities and would be able to create a wide range of projects that will surely meet your needs. Please contact us with your questions and an opportunity for us to demonstrate our abilities.
 
 ### Concept
-A full stack project designed to satisfy the requirement of incorporating Apollo client, Bootstrap, Graphql, React, and Vitest into its creation. The project chosen is an eCommerce website which provides the user with options to select various items from a shopping page and place them into a cart. Once items are placed into the cart and the user would like to proceed with the purchase, he/she is first securely logged in, and then directed to the payment window.
+
+A full stack project designed to satisfy the requirement of incorporating Apollo client, Bootstrap, Graphql, React, and Vitest into its creation. The project chosen is an eCommerce website which provides the user with options to select various items from a shopping page and place them into a cart. Once items are placed into the cart and the user would like to proceed with the purchase, he/she is first securely logged in, and then directed to the payment window. The following are photos of the website on various pages.
+
+Homepage, noting drop down menu. Also, the “CodeBlooded” logo serves as a link that takes the user back to the homepage:
+
+![alt text](<client/public/images/Screenshot Login.png>)
+
+Bottom half of homepage, noting links to Instagram, Twitter, and Github:
+ 
+![alt text](<client/public/images/Screenshot HomeBot.png>)
+
+Following the selection of “Login” on homepage:
+
+ ![alt text](<client/public/images/Screenshot Login.png>)
+
+Following login, note the “Login” button is now “Logout”:
+
+ ![alt text](<client/public/images/Screenshot LoGGedIn.png>)
+
+Following selection of “Signup” on the homepage:
+
+ ![alt text](<client/public/images/Screenshot SignUp.png>)
+
+Following selection of a product from homescreen drop down menu:
+
+![alt text](client/public/images/WhiteTshirtProd.png)
+
 ### Process
-************************************************
+
+Open the terminal, in the command line use the following:
+1.	npm i (installs all necessary files)
+2.	npm run seed (seed the database)
+3.	Npm start (start the server)
+4.	Open Render
+5.	Run the program
+6.	Visualize the website
 
 ### Contributors
 
@@ -77,7 +112,9 @@ https://github.com/lavendarqueen
 
 ## Deployment
 
-- [Link to deployed application](#)**********************************
+Link to Deployed Webpage:
+
+- https://code-blooded-repo-1.onrender.com/ 
 
 - Link to Github Repo:
 
@@ -90,7 +127,9 @@ Presented to the class on the due date. The following are screenshots of the web
 
 ## Credits
 
-Machock, B. (2024, May 7-12). Zoom meeting at www.zoom.us. Denver University Bootcamp.
+Machock, B. (2024, May 7-13). Zoom meeting at www.zoom.us. Denver University Bootcamp.
+
+Miller, C. (2024, May 7-13). Zoom meeting at www.zoom.us. Denver University Bootcamp.
 
 ## License
 
